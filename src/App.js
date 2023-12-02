@@ -1,7 +1,7 @@
 import './App.css';
 import { nanoid } from 'nanoid';
 import InputBox from './components/InputBox';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import NotesList from './components/NotesList';
 
 function App() {
