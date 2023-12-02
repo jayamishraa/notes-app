@@ -1,20 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-function InputBox() {
-    const [inputVal, setInputVal] = useState()
-    const handleInput = (e) => {
-        setInputVal(e.target.value)
-        console.log(e.target.value)
-    }
+function InputBox({setInputVal}) {
+  
   return (
     <div className='input-box'>
+      <i class="fa-solid fa-magnifying-glass" />
       <input 
         className='input-box-search'
-        onChange={handleInput} 
-        value={inputVal} 
+        onChange={(e)=>setInputVal(e.target.value)} 
         placeholder='Search...'
       />
-      <i class="fa-solid fa-magnifying-glass" />
     </div>
   )
 }

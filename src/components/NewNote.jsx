@@ -19,6 +19,10 @@ function NewNote({addNote}) {
   
   return (
     <div className='note new-note'>
+      <div className='footer'>
+        <small>{charLimit - newNote.length} characters remaining</small>
+        <button onClick={handleSaveNewNote} className='button'>✔</button>
+      </div>
       <textarea 
         rows='8' 
         cols='10'
@@ -26,10 +30,6 @@ function NewNote({addNote}) {
         placeholder='Add note...'
         onChange={handleChange}
       ></textarea>
-      <div className='footer'>
-        <small>{charLimit - newNote.length} characters remaining</small>
-        <button onClick={handleSaveNewNote} className='button'>✔</button>
-      </div>
     </div>
   )
 }
